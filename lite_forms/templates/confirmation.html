@@ -2,7 +2,7 @@
 
 {% block back_link %}
     {% if back_link %}
-        <a href="{{ back_link.url }}" id="back-link" class="govuk-back-link">{{ back_link.text }}</a>
+        <a href="{{ request.META.HTTP_REFERER }}" id="back-link" class="govuk-back-link">Back</a>
     {% endif %}
 {% endblock %}
 

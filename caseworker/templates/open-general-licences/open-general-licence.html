@@ -3,8 +3,8 @@
 {% load humanize %}
 
 {% block back_link %}
-	<a href="{% url 'open_general_licences:open_general_licences' %}" class="govuk-back-link">
-		{% lcs 'open_general_licences.Detail.BACK_LINK' %}
+	<a href="{{ request.META.HTTP_REFERER }}" class="govuk-back-link">
+		Back
 	</a>
 {% endblock %}
 

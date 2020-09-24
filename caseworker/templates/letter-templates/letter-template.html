@@ -1,7 +1,7 @@
 {% extends 'layouts/base.html' %}
 
 {% block back_link %}
-	<a href="{% url 'letter_templates:letter_templates' %}" class="govuk-back-link">{% lcs 'LetterTemplates.LetterTemplate.BACK_LINK' %}</a>
+	<a href="{{ request.META.HTTP_REFERER }}" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block body %}

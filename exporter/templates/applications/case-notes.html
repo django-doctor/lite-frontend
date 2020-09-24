@@ -1,8 +1,8 @@
 {% extends 'layouts/two-pane.html' %}
 
 {% block back_link %}
-	<a href="{% url 'applications:task_list' application.id %}" id="back-link" class="govuk-back-link">
-		{% lcs 'applications.ApplicationNotesPage.BACK_LINK' %}
+	<a href="{{ request.META.HTTP_REFERER }}" id="back-link" class="govuk-back-link">
+		Back
 	</a>
 {% endblock %}
 

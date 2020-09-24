@@ -165,7 +165,8 @@
 				<a class="app-case__form-wrapper__back-link" id="back-link" href="{{ request.GET|get:'return_to' }}">Back {% if request.GET|get:'return_to_text' %}to {{ request.GET|get:'return_to_text' }}{% endif %}</a>
 			{% elif page.back_link %}
 				{% if not form_pk or form_pk == 0 %}
-					<a class="app-case__form-wrapper__back-link" id="back-link" href="{{ page.back_link.url }}">{{ page.back_link.text }}</a>
+						<a class="app-case__form-wrapper__back-link" id="back-link" href="{{ request.META.HTTP_REFERER }}">Back</a>
+{#					<a class="app-case__form-wrapper__back-link" id="back-link" href="{{ page.back_link.url }}">{{ page.back_link.text }}</a>#}
 				{% else %}
 					<form method="post">
 						{% csrf_token %}

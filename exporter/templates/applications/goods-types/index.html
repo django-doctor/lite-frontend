@@ -3,7 +3,7 @@
 {% load humanize %}
 
 {% block back_link %}
-	<a href="{% url 'applications:task_list' application.id %}" id="back-link" class="govuk-back-link">{% lcs "goods_types.OverviewPage.BACK" %}</a>
+	<a href="{{ request.META.HTTP_REFERER }}" id="back-link" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block body %}

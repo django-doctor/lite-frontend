@@ -91,7 +91,7 @@
 					<a href="{{ request.GET|get:'return_to' }}" id="back-link" class="govuk-back-link">Back {% if request.GET|get:'return_to_text' %}to {{ request.GET|get:'return_to_text' }}{% endif %}</a>
 				{% else %}
 					{% block back_link %}
-						<a href="#" id="back-link" class="govuk-back-link">Back</a>
+						<a href="{{ request.META.HTTP_REFERER }}" id="back-link" class="govuk-back-link">Back</a>
 					{% endblock %}
 				{% endif %}
 			</section>

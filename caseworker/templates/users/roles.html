@@ -3,8 +3,8 @@
 {% load svg %}
 
 {% block back_link %}
-	<a href="{% url 'users:users' %}" class="govuk-back-link">
-		{% lcs 'roles.ManageRolesPage.BACK_LINK' %}
+	<a href="{{ request.META.HTTP_REFERER }}" class="govuk-back-link">
+		Back
 	</a>
 {% endblock %}
 

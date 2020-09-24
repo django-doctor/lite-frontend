@@ -1,8 +1,8 @@
 {% extends 'layouts/base.html' %}
 
 {% block back_link %}
-	<a href="{% url 'organisations:organisations' %}" class="govuk-back-link">
-		{% lcs "organisations.OrganisationPage.BACK_LINK" %}
+	<a href="{{ request.META.HTTP_REFERER }}" class="govuk-back-link">
+		Back
 	</a>
 {% endblock %}
 

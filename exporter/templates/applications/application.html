@@ -2,12 +2,12 @@
 
 {% block back_link %}
 	{% if summary_page %}
-		<a href="{% url 'applications:task_list' case_id %}" id="back-link" class="govuk-back-link">
-			{% lcs "applications.ApplicationPage.Summary.BACK" %}
+		<a href="{{ request.META.HTTP_REFERER }}" id="back-link" class="govuk-back-link">
+			Back
 		</a>
 	{% else %}
-		<a href="{% url 'applications:applications' %}" id="back-link" class="govuk-back-link">
-			{% lcs "applications.ApplicationPage.BACK" %}
+		<a href="{{ request.META.HTTP_REFERER }}" id="back-link" class="govuk-back-link">
+			Back
 		</a>
 	{% endif %}
 {% endblock %}

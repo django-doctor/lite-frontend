@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block back_link %}
-	<a href="{% url 'letter_templates:letter_template' letter_template.id %}" class="govuk-back-link">Back to {{ letter_template.name }}</a>
+	<a href="{{ request.META.HTTP_REFERER }}" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block body %}

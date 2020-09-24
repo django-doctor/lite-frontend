@@ -3,7 +3,7 @@
 {% load svg %}
 
 {% block back_link %}
-	<a href="{% url 'goods:good_detail' good_id "case-notes" %}" id="back-link" class="govuk-back-link">{% lcs "goods.DeleteGoodDocumentPage.BACK" %}</a>
+	<a href="{{ request.META.HTTP_REFERER }}" id="back-link" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block body %}

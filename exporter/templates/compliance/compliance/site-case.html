@@ -1,8 +1,8 @@
 {% extends 'layouts/base.html' %}
 
 {% block back_link %}
-	<a href="{% url 'compliance:compliance_list' %}" id="back-link" class="govuk-back-link">
-		{% lcs "compliance.ComplianceSiteCase.BACK_LINK" %}
+	<a href="{{ request.META.HTTP_REFERER }}" id="back-link" class="govuk-back-link">
+		Back
 	</a>
 {% endblock %}
 
